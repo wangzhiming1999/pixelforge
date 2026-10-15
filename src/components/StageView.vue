@@ -11,12 +11,22 @@
         @pointerdown.prevent="store.compare = true"
         @pointerup="store.compare = false"
         @pointerleave="store.compare = false"
-      >按住看原图</button>
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v18M3 7.5A3.5 3.5 0 016.5 4h11A3.5 3.5 0 0121 7.5v9a3.5 3.5 0 01-3.5 3.5h-11A3.5 3.5 0 013 16.5z" />
+        </svg>
+        按住看原图
+      </button>
     </div>
 
     <div class="stage-view" ref="viewEl" @pointerdown="onPointerDown" @pointermove="onPointerMove"
          @pointerup="onPointerUp" @pointercancel="onPointerUp">
       <div v-if="!activeFile" class="dropzone" :class="{ hot: hot }">
+        <div class="dz-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><path d="M17 8l-5-5-5 5" /><path d="M12 3v13" />
+          </svg>
+        </div>
         <h2>把图片拖进来</h2>
         <p>支持 JPG / PNG / WebP / GIF / BMP / AVIF 等格式<br />也可以直接 <kbd>Ctrl</kbd>+<kbd>V</kbd> 粘贴剪贴板图片</p>
         <button class="btn btn-primary" @click="pick">选择图片</button>

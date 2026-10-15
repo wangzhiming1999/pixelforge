@@ -12,10 +12,26 @@
     <div class="field">
       <span class="field-label">旋转与翻转</span>
       <div class="btn-row">
-        <button class="btn btn-sm" title="逆时针 90°" @click="rotate(-90)">↺</button>
-        <button class="btn btn-sm" title="顺时针 90°" @click="rotate(90)">↻</button>
-        <button class="btn btn-sm" title="水平翻转" @click="flip('h')">⇋</button>
-        <button class="btn btn-sm" title="垂直翻转" @click="flip('v')">⇅</button>
+        <button class="icon-btn" title="逆时针 90°" @click="rotate(-90)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9" /><path d="M3 3v6h6" />
+          </svg>
+        </button>
+        <button class="icon-btn" title="顺时针 90°" @click="rotate(90)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-9-9" /><path d="M21 3v6h-6" />
+          </svg>
+        </button>
+        <button class="icon-btn" title="水平翻转" @click="flip('h')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v18" /><path d="M8 8L4 12l4 4z" /><path d="M16 8l4 4-4 4z" />
+          </svg>
+        </button>
+        <button class="icon-btn" title="垂直翻转" @click="flip('v')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h18" /><path d="M8 8l4-4 4 4z" /><path d="M8 16l4 4 4-4z" />
+          </svg>
+        </button>
       </div>
     </div>
 
